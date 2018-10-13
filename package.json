@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/psharneja/starwars-names.git"
+    "url": "git+https://github.com/psharneja/starwars-chars.git"
   },
   "keywords": [
     "random",
@@ -19,9 +19,9 @@
   "author": "Prabhsimran Singh <psharneja@gmail.com> (http://psharneja.github.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/psharneja/starwars-names/issues"
+    "url": "https://github.com/psharneja/starwars-chars/issues"
   },
-  "homepage": "https://github.com/psharneja/starwars-names#readme",
+  "homepage": "https://github.com/psharneja/starwars-chars#readme",
   "dependencies": {
     "unique-random-array": "1.0.1"
   }
