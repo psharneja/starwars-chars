@@ -2,9 +2,12 @@
   "name": "starwars-chars",
   "version": "0.0.0-development",
   "description": "Get random starwars-names",
-  "main": "main/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "babel --copy-files --out-dir dist --ignore *.spec.js src",
+    "build:main": "babel --copy-files --out-dir dist --ignore *.spec.js src",
+    "build:umd": "webpack --output-filename index.umd.js -d",
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p",
+    "build": "npm-run-all --parallel build:*",
     "prebuild": "rimraf dist",
     "report-coverage": "cat ./coverage/lcov.info |  codecov",
     "commit": "git-cz",
@@ -40,6 +43,7 @@
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
+    "babel-loader": "8.0.4",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-stage-2": "6.24.1",
     "babel-register": "6.26.0",
@@ -48,11 +52,15 @@
     "commitizen": "3.0.2",
     "cz-conventional-changelog": "2.1.0",
     "ghooks": "2.0.4",
+    "json-loader": "0.5.7",
     "mocha": "5.2.0",
+    "npm-run-all": "4.1.3",
     "nyc": "13.0.1",
     "rimraf": "2.6.2",
     "semantic-release": "^15.9.17",
-    "travis-deploy-once": "5.0.9"
+    "travis-deploy-once": "5.0.9",
+    "webpack": "4.20.2",
+    "webpack-cli": "3.1.2"
   },
   "config": {
     "ghooks": {
