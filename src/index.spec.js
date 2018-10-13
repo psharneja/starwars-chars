@@ -27,5 +27,15 @@ describe('starwars chars', function () {
       var randomItem = starWars.random();
       expect(starWars.all).to.include(randomItem);
     })
+    it('should return an array of random items if passed a number', function() {
+      var randomItem = starWars.random(3);
+      expect (randomItem).to.have.length(3);
+      randomItem.forEach(function(item) {
+      expect(starWars.all).to.include(item);
+
+      })
+
+
+    })
   })
 });
