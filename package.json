@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "test": "mocha src/index.spec.js -w",
-    "test:single": "mocha src/index.spec.js",
+    "test:single": "istanbul cover -x *.spec.js _mocha -- -R spec src/index.spec.js",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
@@ -34,6 +34,7 @@
     "commitizen": "3.0.2",
     "cz-conventional-changelog": "2.1.0",
     "ghooks": "2.0.4",
+    "istanbul": "0.4.5",
     "keytar": "4.3.0",
     "mocha": "5.2.0",
     "semantic-release": "^15.9.17",
